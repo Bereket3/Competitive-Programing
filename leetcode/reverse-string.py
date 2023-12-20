@@ -3,5 +3,7 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        for i in range(len(s)//2):
-            s[i], s[~i] = s[~i], s[i]
+        for i in range(s.__len__()//2):
+            s[i], s[len(s) - i -1] = s[len(s)-i-1], s[i]
+
+        
