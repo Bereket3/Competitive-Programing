@@ -5,5 +5,3 @@ class Solution:
         """
         for i in range(s.__len__()//2):
             s[i], s[len(s) - i -1] = s[len(s)-i-1], s[i]
-
-        
