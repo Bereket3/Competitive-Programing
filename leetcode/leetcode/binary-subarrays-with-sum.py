@@ -3,11 +3,12 @@ class Solution:
         """
         return no of non-empty subarrays with sum goal
         """
-        mapper ={0:1}
+        mapper = Counter()
+        mapper[0] = 1
         out = pri = 0
         for i in nums:
             pri += i
             out += mapper.get(pri - goal, 0)
-            mapper[pri] = mapper.get(pri, 0) + 1
+            mapper[pri] += 1
 
         return out
